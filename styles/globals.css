@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---- Theme tweaks ---- */
+:root {
+  --bg: #f7f8fb;
+  --card: #ffffff;
+  --muted: #6b7280;
+}
+
+html, body { height: 100%; }
+body { @apply bg-[var(--bg)] text-gray-800 antialiased; }
+
+/* ---- Cards & chrome ---- */
+.card { @apply bg-white rounded-2xl shadow-sm border border-gray-100; }
+.card-header { @apply px-5 pt-4 pb-2 text-sm font-semibold text-gray-900; }
+.card-body { @apply p-5; }
+.card-subtle { @apply bg-white rounded-xl shadow border border-gray-200; }
+
+.btn-primary { @apply bg-indigo-600 text-white font-semibold py-3 px-4 rounded-xl hover:bg-indigo-700 transition disabled:bg-indigo-300; }
+.btn-ghost { @apply bg-gray-100 hover:bg-gray-200 text-gray-800 font-medium px-3 py-2 rounded-lg; }
+
+.input { @apply w-full p-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-white; }
+.textarea { @apply w-full h-44 p-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-white; }
+
+.badge { @apply inline-flex items-center gap-1 px-2 py-1 text-xs rounded-full bg-indigo-50 text-indigo-700; }
+
+.toolbar { @apply flex items-center gap-2 justify-between p-2 bg-gray-50 border border-gray-200 rounded-lg; }
+
+/* Scroll area for sidebars */
+.scrolly { max-height: 70vh; overflow: auto; }
+
+/* Nice subtle separator line */
+.hr { @apply h-px bg-gray-200 my-4; }
+
